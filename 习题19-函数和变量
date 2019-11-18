@@ -1,0 +1,32 @@
+时间：2019年11月18日
+
+地点：家
+
+正文：
+
+1、代码
+
+def cheese_and_crackers(cheese_count, boxes_of_crackers):               # 定义函数
+    print(f"You have {cheese_count} cheeses!")
+    print(f"You have {boxes_of_crackers} boxes of crackers!")
+    print("Man that's enough for a party!")
+    print("Get a blanket.\n")
+
+print("We can just give the function numbers directly:")
+cheese_and_crackers(20, 30)                                              # 运行函数：传递的是数字
+
+print("OR, we can use variables from our script:")
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)                # 运行函数：传递的是变量 
+ 
+print("We can even do match inside too:")
+cheese_and_crackers(10 + 20, 5 + 6)                                      # 运行函数：传递的是数学表达式
+
+print("And we can combine the two, variables and match:")
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)   # 运行函数：传递的是数学表达式和变量组合
+
+2、笔记
+（1）函数里的变量是局部变量（local variable）；脚本里的变量是全局变量（global variable）。二者是不同的。
+（2）在运行函数时，其中参数的形式很多，可以传递数字、变量、数学表达式、表达上与变量的组合。
