@@ -1,0 +1,32 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+
+1、代码
+
+# Here's some new strange stuff, remember type it exactly.
+
+days = "Mon Tue Wed Thu Fri Sat Sun"
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+
+print("Here are the days:", days)
+print("Here are the months:", months)
+
+print("""
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5, or 6.
+""")
+
+
+2、笔记
+（1）本节出现了转义序列\，用于转义。如\n表示重新换一行；\t表示缩进四个空格。
+（2）三引号用于将多行代码放在一起。
+
+
+
+
