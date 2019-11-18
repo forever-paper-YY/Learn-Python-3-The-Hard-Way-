@@ -4,7 +4,7 @@
 
 正文：
 
-（1）代码部分
+1、代码部分
 
 print(“Hello World!”)
 print("Hello Again!")
@@ -14,5 +14,5 @@ print("Yay! Printing.")
 print("I'd much rather you 'not.")
 print("I 'said' do not touch this.")
 
-(2)理解
+2、理解
 本节在理解上没有难度。
