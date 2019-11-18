@@ -1,0 +1,27 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+formatter = "{} {} {} {}"
+
+print(formatter.format(1, 2, 3, 4))
+print(formatter.format("one", "two", "three", "four"))
+print(formatter.format(True, False, False, True))
+print(formatter.format(formatter, formatter, formatter, formatter))
+print(formatter.format(
+    "Try your",
+    "Own text here",
+    "Maybe a poem",
+    "Or a song about fear"
+))
+
+
+2、笔记
+（1）True和False是python中的关键字，用来表示真和假的概念（注意首字母大写）。
+
+
+
+
