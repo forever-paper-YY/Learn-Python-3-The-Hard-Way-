@@ -1,0 +1,50 @@
+时间：2019年11月18日
+
+地点：家
+
+正文：
+
+1、代码
+
+def add(a, b):                                                         # 定义函数一
+    print(f"ADDING {a} + {b}")
+    return a + b
+
+def subtract(a, b):                                                    # 定义函数二
+    print(f"SUBTRACTING {a} - {b}")
+    return a - b
+
+def multiply(a, b):                                                    # 定义函数三
+    print(f"MULTIPLYING {a} * {b}")
+    return a * b
+
+def divide(a, b):                                                      # 定义函数四
+    print(f"DIVIDING {a} / {b}")
+    return a / b
+
+print("Let's do some math wiith just functions!")
+age = add(30, 5)                                                       # 运行函数一
+height = subtract(78, 4)                                               # 运行函数二
+weight = multiply(90, 2)                                               # 运行函数三
+iq = divide(100, 2)                                                    # 运行函数四
+
+print(f"Age: {age}, Height: {height}, Weight: {weight}, IQ: {iq}")
+
+# A puzzle for the extra credit, type it in anyway.
+print("Here is a puzzle.")
+
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))     # 嵌套运行函数一二三四
+
+print("That becomes:", what, "Can you do it by hand?")
+
+
+2、笔记
+（1）如何理解return函数？
+python中的函数是你招来的工人，你给他一些材料，告诉他怎么用这些材料拼装。然后他负责将拼装好的成品交给你。
+材料就是参数，成品是函数的输出，而怎么拼装（即拼装的过程）就是你写的函数主体。比如这个：
+def worker(a, b, c):
+    x = a + b
+    y = x * c
+    return y
+这个工人（即worker函数）在你的指导下，用a、b、c拼装出了x和y两个成品。但是函数的装配和实体工厂不同，原材料a、b、c并不会消失。
+因此最后会有a/b/c/x/y五个物品。此时return函数的作用就是告诉python你最终需要的是哪个。
