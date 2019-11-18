@@ -1,0 +1,28 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+tabby_cat = "\tI'm tabbed in."
+persian_cat = "I'm split\non a line."
+backslash_cat = "I'm \\ a \\ cat."
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+print(tabby_cat)
+print(persian_cat)
+print(backslash_cat)
+print(fat_cat)
+
+
+2、笔记
+（1）本节列出了所有的转义序列，可以多看看。
+（2）重新换行的方法有两个：一个是转义序列\n，一个是三引号换行。
