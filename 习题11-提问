@@ -1,0 +1,22 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+
+1、代码
+
+print("How old are you?", end=' ')
+age = input()
+print("How tall are you?", end=' ')
+height = input()
+print("How much do you weight?", end=' ')
+weight = input()
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+
+2、笔记
+（1）python除了输出函数（print）外，还有输入函数（input），用于和用户互动。
+对于input函数，会强制将所有形式的输入都按照字符串处理。如果想得到其他类型的数据，则需要进行类型转换。
