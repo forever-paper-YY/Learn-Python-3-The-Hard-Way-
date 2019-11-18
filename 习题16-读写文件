@@ -1,0 +1,53 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+from sys import argv
+script, filname = argv
+
+print(f"We're going to erase {filename}.")
+print("If you don't want that, hit CTRL-C (^C).")
+print("If you do want that, hit RETURN.")
+
+input("?")
+
+print("Opening the file...")
+target = open(filename, 'w')   # 以写入模式打开文件，并赋值给变量target
+
+print("Truncating the file. Goodbye!")
+target.truncate()              # 清空文件
+
+print("Now I'm going to ask you for three lines.")
+
+line1 = input("line 1: ")
+line2 = input("line 2: ")
+line3 = input("line 3: ")
+
+print("I'm going to write these to the file.")
+
+target.write(line1)            # 写入文件
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+
+print("And finally, we close it.")
+target.close()                 # 关闭文件
+
+2、笔记
+（1）和文件有关的函数：
+open，打开文件。用法是【变量 = open(文件名，参数名)】。其中参数包括：r（只读模式，一般是默认）、w（写入模式）、a（追加模式）。
+read，读取文件。用法是【变量 = 文件.read()】
+readline，只读取文件中的一行。用法是【】
+write，在文件中写入内容。用法是【文件.write(变量)】
+truncate，清空文件。用法是【文件.truncate()】
+close，关闭文件。用法是【文件.close()】
+（2）seek是文件的搜寻函数，用于在文件中搜寻字节。如【文件.seek(0)】运行后就会转到文件的0字节位置（即第一个字节）。
+作用在于：代码运行后，其中的read函数会令文件光标停留在最末尾。如果不用seek函数转到文件开头，后续的很多函数如readline就无法运行了。
+这个函数在习题20中有。
+
