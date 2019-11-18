@@ -1,0 +1,28 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+from sys import argv   # 从sys模块中导入argv函数
+script, filename = argv     # 将argv解包，赋值给内部的两个变量script，filename
+
+txt = open(filename)   # open函数的用法是：open(文件名)
+ 
+print(f"Here's your file {filename}:")
+print(txt.read())      # read函数的用法是：文件名.read()
+
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again.read())
+
+
+2、笔记
+（1）在实际工作中，读取文件是非常常见的操作。注意理解本节的逻辑：用户输入的文件名是千变万化的，因此需要通过argv参数变量将外部变化的参数赋值给
+内部不变的变量。变量的“不变”是物理上的不变，而内在却是“变”的，即会根据外部传入参数的不同而变化。所以才需要用到argv，通过赋值来调节。
+（2）有两个关于文件的新函数：open和read。
