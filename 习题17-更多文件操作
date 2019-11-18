@@ -14,7 +14,7 @@ print(f"Copying from {from_file} to {to_file}")
 
 # we could do these two on one line, how?
 in_file = open(from_file)     # 打开文件
-indata = in_file.read()       # 读取文件
+indata = in_file.read()       # 读取文件（使用read函数后，python会自动关掉该文件）
 
 print(f"The input file is {len(indata)} bytes long")  # len函数和VBA中一样，用于返回字符串的长度
 print(f"Dose the output file exist? {exists(to_file)}")
