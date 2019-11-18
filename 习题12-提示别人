@@ -1,0 +1,15 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+age = input("How old are you?")
+height = input("How tall are you?")
+weight = input("How much do you weigh?")
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+2、笔记
