@@ -1,0 +1,43 @@
+时间：2019年11月18日
+
+地点：家
+
+正文：
+
+1、代码
+
+# this one is like your scripts with argv
+def print_two(*args):                         # 定义函数一
+    arg1, arg2 = args
+    print(f"arg1: {arg1}, arg2: {arg2}")
+
+# ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1, arg2):              # 定义函数二 
+    print(f"arg1: {arg1}, arg2: {arg2}")
+
+# this just takes one argument
+def print_one(arg1):                          # 定义函数三
+    print(f"arg1: {arg1}")
+
+# this just takes no arguments
+def print_none():                             # 定义函数四
+    print("I got nothin'.")
+
+print_two("Zed", "Shaw")                      # 运行函数一
+print_two_again("Zed", "Shaw")                # 运行函数二
+print_one("First!")                           # 运行函数三
+print_none(""）                               # 运行函数四
+
+
+2、笔记
+（1）函数（function）的固定格式务必要牢记：
+def 函数名（参数1，参数2）：
+    函数主体
+（2）注意事项包括：
+def是关键字，作为函数的开头；
+函数名必须是【字符+数字+下划线】的形式，且自定义的函数名尽量不要和内建函数混淆；
+括号内是参数；
+必须以冒号结尾；
+函数主体必须用四个空格缩进，若要退出此函数则不再缩进。
+定义函数是为了调用函数。在调用时，语句是【函数名（参数1，参数2）】
+
