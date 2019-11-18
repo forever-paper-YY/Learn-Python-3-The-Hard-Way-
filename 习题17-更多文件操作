@@ -1,0 +1,34 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+from sys import argv          # 从sys包中导入argv模块
+from os.path import exists    # 从os.path模块中导入exists函数
+script, from_file, to_file = argv
+
+print(f"Copying from {from_file} to {to_file}")
+
+# we could do these two on one line, how?
+in_file = open(from_file)     # 打开文件
+indata = in_file.read()       # 读取文件
+
+print(f"The input file is {len(indata)} bytes long")  # len函数和VBA中一样，用于返回字符串的长度
+print(f"Dose the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w') # 以写入模式打开文件（用写入模式的open函数可以直接创建一个新文件，而无需自己提前创建好）
+out_file.write(indata)        # 写入文件
+
+print("Alright, all done.")
+out_file.close()              # 关闭文件
+in_file.close()
+
+2、笔记
+（1）20行的exists函数：这个命令将文件名字符串作为参数，如果文件存在的话，将返回true；否则将返回false。用于判断一个文件是否存在。
+（2）将A文件打开（open）、读取（read），再打开B文件（open）、并写入（write）读取的内容中，就完成了文件内容的复制。
+
