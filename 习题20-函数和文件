@@ -1,0 +1,46 @@
+时间：2019年11月18日
+
+地点：家
+
+正文：
+
+1、代码
+
+from sys import argv                             # 从sys包中导入argv模块
+script, input_file = argv                        # 对argv进行解包，分别赋值给不同的变量
+
+def print_all(f):                                # 定义函数一
+    print(f.read())
+
+def rewind(f):                                   # 定义函数二
+    f.seek(0)
+
+def print_a_line(line_count, f):                 # 定义函数三
+    print(line_count, f.readline())
+
+current_file = open(input_file)
+
+print("First let's print the whole file:\n")
+
+print_all(current_file)                           # 运行函数一
+
+print("Now let's rewind, kind of like a tape.")
+
+rewind(current_file)                              # 运行函数二
+
+print("Let's print three lines:")
+
+current_line = 1
+print_a_line(current_line, current_file)          # 运行函数三
+
+current_line = current_line + 1
+print_a_line(current_line, current_file)          # 运行函数三
+
+current_line = current_line + 1
+print_a_line(current_line, current_file)          # 运行函数三
+
+
+2、笔记
+（1）本节有seek函数与read函数的配合。read函数在读取文件后光标会停留在末尾，无法进行之后的操作；此时需要seek函数将光标移回到文件开始。
+（2）readline函数的工作原理：readline代码会扫描文件里的每一个字节，直到找到一个\n为止，然后会停止读取文件，并返回此前发现的文件内容。
+文件f会记录每次调用readline后的停留位置，在下次被调用时接着读取下一行。
