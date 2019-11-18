@@ -1,0 +1,25 @@
+时间：2019年11月18日
+
+地点：公司
+
+正文：
+
+1、代码
+
+from sys import argv    # 从sys模块中导入argv，用于从程序外部获取多个参数，并赋值给代码内部的变量。这个方法要牢记。
+# read the WYSS section for how to run this
+script, first, second, third = argv  # 导入的参数需要“解包”。
+
+print("The script is called:", script)
+print("Your first variable is:", first)
+print("Your second variable is:", second)
+print("Your third variable is:", third)
+
+2、笔记
+（1）开始学习数据结构的第一种：模块（module）。模块即以.py后缀结尾的文件，包括内建模块和外部模块。
+
+（2）导入有两种方式。一种是【from 模块 import 函数】，此时在运行函数时直接写【函数名（变量）】即可；
+第二种是【import 模块名】，此时在运行函数时需要写【模块名.函数名（变量）】。
+
+（3）sys是一个内建模块，argv（argument variable）即参数变量。
+引入后需要“解包”（如代码11行），理解为“argv可以看做是个参数包裹，里面装了非常多的参数。通过import导入，并将其中的参数交给不同的内部变量”。
