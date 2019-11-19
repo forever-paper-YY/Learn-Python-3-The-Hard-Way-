@@ -1,0 +1,46 @@
+时间：2019年11月19日
+
+地点：公司
+
+正文：
+
+1、代码
+
+people = 20
+cats = 30
+dogs = 15
+
+if people < cats:
+    print("Too many cats! The world is doomed!")
+
+if people > cats:
+    print("Not many cats! The world is saved!")
+
+if people < dogs:
+    print("The world is drooled on!")
+
+if people > dogs:
+    print("The world is dry!")
+ 
+dog += 5
+
+if people >= dogs:
+    print("People are greater than or equal to dogs.")
+
+if people <= dogs:
+    print("People are less than or equal to dogs.")
+
+if people = dogs:
+    print("People are dogs.")
+
+2、笔记
+if语句的固定格式如下
+if 判断事项：
+    执行动作（段首四个空格缩进）
+elif 判断事项：
+    执行动作（段首四个空格缩进）
+elif 判断事项：
+    执行动作（段首四个空格缩进）
+else：
+    执行动作（段首四个空格缩进）
+
