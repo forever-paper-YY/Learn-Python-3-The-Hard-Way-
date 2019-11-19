@@ -1,0 +1,41 @@
+时间：2019年11月19日
+
+地点：公司
+
+正文：
+
+1、代码
+
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
+
+print("Wait there are not 10 things in that list. Let's fix that.")
+
+stuff = ten_things.split(' ')                                                         # split函数
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+while len(stuff) != 10:                                                               # while无限循环
+    next_one = more_stuff.pop()                                                       # pop函数
+    print("Adding:", next_one)
+    stuff.append(next_one)                                                            # append函数
+    print(f"There are {len(stuff)} itmes now.")
+
+print("There we go:", stuff)
+
+print("Let's do some things with stuff.")
+
+print(stuff[1])                                                                       # 访问列表中的元素
+print(stuff[-1])  # whoa! fancy
+print(stuff.pop())
+print(' '.join(stuff))  # what? cool!                                                 # join函数
+print('#'.join(stuff[3:5]))  # super stellar!
+
+2、笔记
+（1）数据结构是组织数据的正式方法。其中列表是最常用的一种数据结构。
+功能：列表是有序的，既可以存储，也可以访问（随机访问、线性索引）。
+（2）join函数是个连接函数。语法是【sep.join(seq)】，其中sep为分隔符，可以为空；seq为要连接的元素，如列表、字符串、元祖、字典。
+可以理解为以sep作为分隔符，将seq所有的元素合并，最终返回一个新的字符串。
+（3）stuff[1]表示读取stuff这个列表中的第2个元素；
+stuff[-1]表示读取stuff这个列表中的最后一个元素；
+stuff[3:5]表示读取stuff这个列表中第4个、第5个元素（而没有第6个）。
+
+
