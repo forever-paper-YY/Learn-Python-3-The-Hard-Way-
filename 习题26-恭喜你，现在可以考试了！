@@ -1,0 +1,97 @@
+时间：2019年11月19日
+
+地点：公司
+
+正文：本节课需要复制粘贴ex26.txt然后改正（代码下载地址：https://learnpythonthehardway.org/python3/exercise26.txt）。
+
+代码如下：
+
+print("How old are you?", end=' ')
+age = input()
+print("How tall are you?", end=' ')                                     # 此处少了一个：height = input()
+print("How much do you weigh?", end=' '                                 # 此处少了一个后面的括号
+weight = input()
+
+print(f"So, you're {age} old, {height} tall and {weight} heavy.")
+
+script, filename = argv                                                 # 这里直接将argv解包。但代码开始时并未引入，即缺少：
+                                                                          from sys import argv
+txt = open(filenme)                                                     # 参数的拼写错了，应该是open(filename)
+
+print("Here's your file {filename}:")
+print(tx.read())                                                        # 变量的拼写错了，应该是txt.read()
+
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again_read())                                                  # 拼写错误，应该是 print(txt_again.read())
+
+print('Let's practice everything.')
+print('You\'d need to know \'bout escapes                                # 断行错误。本行末尾应该加一个反斜杠\
+      with \\ that do \n newlines and \t tabs.')
+
+poem = """
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\t\twhere there is none.
+"""
+
+print("--------------)                                                    # 括号内缺少一个右侧双引号
+print(poem)
+print(--------------")                                                    # 括号内缺少一个左侧双引号
+
+five = 10 - 2 + 3 -                                                       # 公式不完整，应该是 five = 10 - 2 + 3 - 6
+print(f"This should be five: {five}"                                      # 缺少一个右侧小括号
+
+def secret_formula(started)                                               # 函数的固定格式不对，缺少一个冒号
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars  100                                                    # 函数主体不完整，缺少一个符号
+    return jelly_beans, jars, crates
+
+start_point = 10000
+beans, jars = secret_formula(start_point)                                 # 运行函数时参数赋值不够，即等号左边少一个变量。
+
+# remember that this is another way to format a string
+print("With a starting point of: {}".format(start_point))
+# it's just like with an f"" string
+print(f"We'd have {beans} beans, {jars} jars, and {crates} crates.")
+
+start_point = start_point / 10
+
+print("We can also do that this way:")
+formula = secret_formula(startpoint)
+# this is an easy way to apply a list to a format string
+print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
+
+people = 20
+cates = 30
+dogs = 15
+
+if people < cats:
+    print "Too many cats! The world is doomed!"                             # python3的版本中，print需要跟小括号
+
+if people < cats:                                                           # 此处的逻辑有误，应该是 if people > cats:
+    print("Not many cats! The world is saved!")
+
+if people < dogs:
+    print("The world is drooled on!")
+
+if people > dogs
+    print("The world is dry!")
+
+dogs += 5
+
+if people >= dogs:
+    print("People are greater than or equal to dogs.")
+
+if people <= dogs
+    print("People are less than or equal to dogs.)
+
+if people = dogs:
+    print("People are dogs.")
