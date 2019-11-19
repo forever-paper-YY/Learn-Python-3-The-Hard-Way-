@@ -5,18 +5,42 @@
 正文：
 
 1、代码
+ 
+def break_words(stuff):                                              # 定义函数一
+    """This function will break up words for us."""
+    words = stuff.split(' ')                                         # split函数
+    return words
 
+def sort_words(words):                                               # 定义函数二
+    """Sorts the words.""" 
+    return sorted(words)                                             # sorted函数
 
+def print_first_word(words):                                         # 定义函数三
+    """Prints the first word after popping it off"""
+    word = words.pop(0)                                              # pop函数
+    print(word)
 
+def print_last_word(words):                                          # 定义函数四
+    """Print the last word after popping it off."""
+    word = words.pop(-1)
+    print(word)
 
+def sort_sentence(sentence):                                          # 定义函数五
+    """Takes in a full sentence and returns the sorted words."""
+    words = break_words(sentence)                                     # 运行函数一
+    return sort_words(words)                                          # 运行函数二
 
+def print_first_and_last(sentence):                                   # 定义函数六
+    """Prints the first and last words of the sentence."""
+    words = break_words(sentence)                                     # 运行函数一
+    print_first_word(words)                                           # 运行函数三
+    print_last_word(words)                                            # 运行函数四
 
-
-
-
-
-
-
+def print_first_and_last_sorted(sentence):                            # 定义函数七
+    """Sorts the words then prints the first and last one."""
+    words = sort_sentence(sentence)                                   # 运行函数五
+    print_first_word(words)                                           # 运行函数三
+    print_last_word(words)                                            # 运行函数四
 
 2、笔记
 （1）split函数，通过指定分隔符对字符串进行切片。语法是【str.split(分隔符，参数num)】。
@@ -27,10 +51,4 @@
 从左往右数，按照序数排列的方式，即0、1、2、3。。。。
 从右往左数，按照基数排列的方式，即-1、-2、-3、-4。。。
 括号中无参数的时候，默认是最后一个元素。
-
-
-
-
-
-
 
