@@ -1,0 +1,29 @@
+时间：2019年11月19日
+
+地点：公司
+
+正文：
+
+1、代码
+
+i = 0
+numbers = []                            # 列表结构
+
+while i < 6:                            # while循环
+    print(f"At the top i is {i}")
+    numbers.append(i)
+    
+    i = i + 1
+    print("Numbers now:", numbers)
+    print(f"At the bottom i is {i}")
+
+print("The numbers: ")
+
+for num in numbers:                     # for循环
+    print(num)
+
+
+2、笔记
+（1）while循环与if语句类似，都是去检查一个布尔表达式的真假；
+但不一样的是它下面的代码库不只执行一次，而是执行完再跳回到while的顶部，如此重复直到表达式为False为止。
+一般配合continue和break执行。
