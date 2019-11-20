@@ -1,0 +1,58 @@
+时间：2019年11月20日 
+
+地点：公司 
+
+正文：
+
+1、代码
+
+# Animal is-a object (yes, sort of confusing) look at the extra credit
+class Animal(object):                              # 定义父类Animal
+    pass                                           # pass是个占位符语句，无实际意义
+
+class Dog(Animal):                                 # 定义子类Dog
+    def _init_(self, name):                        # 使用_init_函数进行初始化，并加入属性name
+        ## ??
+        self.name = name                           # 将外部的name变量赋值给类内部所有的对象
+
+class Cat(Animal):                                 # 定义子类Cat
+    def _init_(self, name):
+        self.name = name
+ 
+class Person(object):                              # 定义父类Person
+    def _init_(self. name):
+        self.name = name
+        ## Person has-a pet of some kind
+        self.pet = None
+
+class Employee(Person):                             # 定义子类Employee
+    def _init_(self, name, salary):                 # 使用_init_函数进行初始化，并加入属性name和salary
+        ## ?? hmm what is this strange magic?
+        super(Employee, self)._init_(name)          # 使用super函数，使得对象继承类中的属性
+        ## ??
+        self.salary = salary
+
+class Fish(object):                                 # 定义父类Fish
+    pass
+
+class Salmon(Fish):                                 # 定义子类Salmon
+    pass
+
+class Halibut(Fish):                                # 定义子类Halibut
+    pass
+
+rover = Dog("Rover")                                # 将子类Dog实例化，创建实例rover，注意需要同时赋予属性
+satan = Cat("Satan")                                # 将子类Cat实例化，创建实例satan，注意需要同时赋予属性
+mary = Person("Mary")                               # 将子类Person实例化，创建实例mary，注意需要同时赋予属性
+mary.pet = satan                                    # 执行类中的方法
+frank = Employee("Frank", 120000)                   # 将子类Employee实例化，创建实例frank，注意需要同时赋予属性
+frank.pet = rover                                   # 执行类中的方法
+flipper = Fish()                                    # 将父类Fish实例化，创建实例flipper
+crouse = Salmon()                                   # 将子类Salmon实例化，创建实例crouse
+harry = Halibut()                                   # 将子类Halibut实例化，创建实例harry
+
+
+2、笔记
+python同时可以“面向对象编程”和“函数式编程”，其中“面向对象编程”更为重要。核心是对“类”和“对象”的使用。
+“类”（class）是模板，通过实例化（initialize）创建实例（initial）（又称对象 object）。
+
