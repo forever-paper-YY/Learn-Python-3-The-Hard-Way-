@@ -1,0 +1,112 @@
+时间：2019年11月20日 
+
+地点：公司 
+
+正文：
+
+1、代码
+
+（1）隐式继承
+class Parent(object):                       # 定义父类Parent
+    def implicit(self):
+        print("PARENT implicit()")
+
+class Child(Parent):                        # 定义子类Child，直接继承父类所有方法
+    pass
+
+dad = Parent()                              # 将父类实例化，创建对象dad
+son = Child()                               # 将子类实例化，创建对象son 
+dad.implicit()                              # 执行父类中的方法implicit函数
+son.implicit()                              # 执行子类中的方法implicit函数
+
+（2）显式覆盖
+class Parent(object):
+    def override(self):
+        print("PARENT override()")
+
+class Child(Parent):
+    def override(self):                     # 由于子类定义了和父类相同的方法，因此会覆盖父类的方法 
+        print("CHILD override()")
+
+dad = Parent()
+son = Child()
+dad.override()
+son.override()
+
+（3）在运行前或运行后替换
+class Parent(object):
+    def altered(self):
+        print("PARENT altered()")
+
+class Child(Parent):
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print("CHILD, AFTER PARENT altered()")
+
+dad = Parent()
+son = Child()
+dad.altered()
+son.altered()
+
+（4）三种方式组合使用
+class Parent(object):
+    def override(self):
+        print("PARENT override()")
+    def implicit(self):
+        print("PARENT implicit()")
+    def altered(self):
+        print("PARENT altered()")
+ 
+class Child(Parent):
+    def override(self):
+        print("CHILD override()")
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print("CHILD, AFTER PARENT altered()")
+
+dad = Parent()
+son = Child()
+dad.implicit()
+son.implicit()
+dad.override()
+son.override()
+dad.altered()
+dad.altered()
+
+（5）组合
+class Other(object):
+    def override(self):
+        print("OTHER override()")
+    def implicit(self):
+        print("OTHER implicit()")
+    def altered(self):
+        print("OTHER altered()")
+
+class Child(object):
+    def _init_(self):
+        self.other = Other()
+    def implicit(self):
+        self.other.implicit()
+    def override(self):
+        print("CHILD override()")
+    def altered(self):
+        print("CHILD, BEFORE OTHER altered()")
+        self.other.altered()
+        print("CHILD, AFTER OTHER altered()")
+
+son = Child()
+son.implicit()
+son.override()
+son.altered()
+
+
+2、笔记
+（1）继承是用于指明一个类的大部分或全部功能都是从一个父类中获得的。
+父类与子类有三种交互方式：
+子类上的动作完全等同于父类上的动作（即隐式继承）；
+子类上的动作完全覆盖了父类上的动作（即显式覆盖）；
+子类上的动作部分替换了父类上的动作（即在运行前或运行后替换）。
+（2）组合，就是直接使用别的类和模块，而非依赖于隐式继承。
+
