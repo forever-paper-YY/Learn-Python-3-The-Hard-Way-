@@ -1,0 +1,62 @@
+时间：2019年11月20日 
+
+地点：公司 
+
+正文：
+
+1、代码
+
+（1）列表list
+things = ['a', 'b', 'c', 'd']
+print(things[1])               # 结果是：b
+thing[1] = 'z'
+print(things[1])               # 结果是：z
+things                         # 结果是：['a', 'z', 'c', 'd']
+
+(2)字典dictionary
+stuff = {'name': 'Zed', 'age': 39, 'height': 6 * 12 + 2}
+print(stuff['name'])           # 结果是：Zed
+print(stuff['age'])            # 结果是：39
+print(stuff['height'])         # 结果是：74
+stuff['city'] = 'SF'
+print(stuff['city'])           # 结果是：SF
+
+stuff[1] = 'Wow'
+stuff[2] = "Neato"
+print(stuff[1])                # 结果是：Wow
+print(stuff[2])                # 结果是：Neato
+
+del stuff['city']
+del stuff[1]
+del stuff[2]
+stuff                          # 结果是：{'name': 'Zed', 'age': 39, 'height': 74}
+
+
+# creat a mapping of state to abbreviation
+states = {
+    'Oregon': 'OR',
+    'Florida': 'FL',
+    'California':'CA',
+    'New York': 'NY',
+    'Michigan': 'MI'
+    }
+
+
+
+
+
+2、笔记
+(1)字典和列表一样，是编程中最常用的数据结构之一。它的用处是把你要存储的东西和你的键映射或关联起来。
+【概念】：字典是一系列的键值对（key-value）。每一个键都与一个值相关联，可以使用键来访问与之相关联的值，即满足映射的关系。
+【固定格式】：每个键与值之间用冒号分隔，不同的键值对之间用逗号分隔。整个字典需要用花括号，如dict = {key1: value1, key2: value2}。
+             其中键（key）必须是唯一不可变的，表现形式是字符串、数字或元祖。而值可以是任何的数据类型。
+【字典与列表的异同】
+差异：列表是有序的对象集合，索引总是从0开始，连续增大；不允许对不存在的索引赋值。
+     而字典是无序的对象集合，索引无需从0开始，也无需连续；允许直接对不存在的key赋值，相当于增加了一个key-value对。
+相同：字典可以看做是索引为任意不可变类型的列表；而列表相当于key只能为整数的字典。因此如果程序中要使用的字典key都是整数类型，可以考虑是否换成列表。
+【特性】：同一个键不允许出现两次，创建时如果同一个键被赋值两次，后一个值会覆盖前一个值；
+         键必须是唯一不可变，所以应该用数字、字符串或元祖充当，而列表则不行。
+【基本操作】访问、添加、删除、修改、判断是否存在。
+
+
+
