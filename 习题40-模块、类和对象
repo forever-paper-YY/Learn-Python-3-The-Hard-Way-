@@ -1,0 +1,67 @@
+时间：2019年11月20日 
+
+地点：公司 
+
+正文：
+
+1、代码
+
+（1）模块和字典
+mystuff = {'apple': "I AM APPLES!"}                    # 字典
+print(mustuff['apple'])                                # 访问字典
+
+# this goes in mystuff.py
+def apple():                                           # 定义函数apple
+    print("I AM APPLES!")
+
+import mystuff                                         # 导入模块mystuff
+mystuff.apple()                                        # 运行stuff模块中的apple函数
+
+（2）类和模块
+class Mystuff(object):                                 # 定义类Mystuff
+    def _init_(self):                                  # 用_init_函数进行初始化
+        self.tangerine = "And now a thousand years between"
+    
+    def apple(self)：                                  # 定义类中的方法
+        print("I AM CLASSY APPLES!")
+
+（3）对象和import
+thing = Mystuff()                                      # 将类Mystuff进行实例化，创建对象thing
+thing.apple()                                          # 用对象thing执行类中的apple函数
+print(thing.tangerine)
+
+（4）获取某样东西里包含的东西
+# dict style 
+mystuff['apples']
+
+# module style
+mystuff.apples()
+print(mystuff.tangerine)
+
+# class style
+thing = Mystuff()
+thing.apples()
+print(thing.tangerine)
+
+（5）第一个类的例子
+class Song(object):                                     # 定义类Song
+    def _inti_(self, lyrics):                           # 用_init_函数进行初始化
+        self.lyrics = lyrics
+    
+    def sing_me_a_song(self):                           # 定义类中的方法
+        for line in self.lyrics：
+            print(line)
+
+happy_bday = Song(["Happy birthday to you",             # 将类Song进行实例化，创建对象happy_bday
+                  "I don't want to get sued",
+                  "So I'll stop right there"])
+
+bulls_on_parade = Song(["They rally around the family",  # 将类Song进行实例化，创建对象bulls_on_parade
+                       "With pockets full of shells"])
+
+happy_bday.sing_me_a_song()                              # 用对象happy_bday执行类中的sing_me_a_song函数
+bulls_on_parade.sing_me_a_song()                         # 用对象bulls_on_parade执行类中的sing_me_a_song函数
+
+
+2、笔记
+（1）理解模块（module）和包（package）的概念
